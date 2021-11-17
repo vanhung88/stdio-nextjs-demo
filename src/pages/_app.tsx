@@ -1,14 +1,14 @@
-import React from 'react';
-import { AppProps } from 'next/app';
-import { createGlobalStyle } from 'styled-components';
-import { NextComponentType, NextPageContext } from 'next';
-import { Provider } from 'react-redux';
-import 'antd/dist/antd.css';
-import Head from 'next/head';
-import Header from '../components/Header';
+import React from "react";
+import { AppProps } from "next/app";
+import { createGlobalStyle } from "styled-components";
+import { NextComponentType, NextPageContext } from "next";
+import { Provider } from "react-redux";
+import "antd/dist/antd.css";
+import Head from "next/head";
+import Header from "../components/Header";
 
 // import Header from '../components/Header';
-import store from '../store';
+import store from "../store";
 
 interface MyAppProps extends AppProps {
   Component: {
@@ -22,16 +22,16 @@ export default function App({ Component, pageProps }: MyAppProps) {
   const Layout = Component.Layout || React.Fragment;
 
   return (
-    <div className='root'>
+    <div className="root">
       <Head>
         <title>Kalles Shopify</title>
         <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1, maximum-scale=1'
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <link
-          href='https://fonts.googleapis.com/css2?family=Estonia&family=Mulish:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap'
-          rel='stylesheet'
+          href="https://fonts.googleapis.com/css2?family=Estonia&family=Mulish:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap"
+          rel="stylesheet"
         />
       </Head>
       <Provider store={store}>

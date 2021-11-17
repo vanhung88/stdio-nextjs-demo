@@ -1,5 +1,21 @@
 .Wrapper {
   // padding: 0 90px;
+  @media screen and (max-width: 992px) {
+    .ProductList {
+      padding: 0 10px !important;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .ProductList {
+      justify-content: center;
+    }
+    .ant-card-body {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  //   justify-content: space-between;
 }
 .ProductList {
   padding: 0 90px;
@@ -7,11 +23,9 @@
   margin-top: 100px;
   display: flex;
   max-width: 100%;
-  //   justify-content: space-between;
 }
 .Text {
   text-align: center;
   font-size: 30px;
   font-weight: 800;
-  padding: 40px 0 20px 0;
 }

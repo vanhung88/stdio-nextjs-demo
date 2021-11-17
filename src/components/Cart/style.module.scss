@@ -1,6 +1,10 @@
 .Cart {
-  width: 320px;
+  margin: 0 10px;
   margin-bottom: 20px;
+
+  .ant-image {
+    width: 100%;
+  }
 }
 .Description {
   cursor: pointer;

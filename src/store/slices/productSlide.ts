@@ -3,16 +3,30 @@ import {
   Draft,
   PayloadAction,
   createAsyncThunk,
-} from '@reduxjs/toolkit';
-import productApi from '../../services/apis/product';
+} from "@reduxjs/toolkit";
+import productApi from "../../services/apis/product";
 
 //API
 // [GET] : list product
 export const productList: any = createAsyncThunk(
-  'api/register',
+  "api/products",
   async ({}, { rejectWithValue }) => {
     try {
       const { data } = await productApi.listProduct();
+      return data;
+    } catch (err: any) {
+      return rejectWithValue(err.response.data.message);
+    }
+  }
+);
+
+//API
+// [GET] : list product by id
+export const productDetail: any = createAsyncThunk(
+  "api/product/id",
+  async (params: string, { rejectWithValue }) => {
+    try {
+      const { data } = await productApi.productDetail(params);
       return data;
     } catch (err: any) {
       return rejectWithValue(err.response.data.message);
@@ -25,7 +39,7 @@ const initialState = {
 } as const;
 
 export const productSlice = createSlice({
-  name: 'product',
+  name: "product",
   initialState,
   reducers: {
     test: () => {
@@ -33,7 +47,7 @@ export const productSlice = createSlice({
     },
   },
   extraReducers: {
-    // login list
+    // get list products
     [productList.pending]: (state: any) => {
       state.loading = true;
     },
