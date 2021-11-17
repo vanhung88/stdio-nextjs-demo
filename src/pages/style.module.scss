@@ -1,0 +1,17 @@
+.Wrapper {
+  // padding: 0 90px;
+}
+.ProductList {
+  padding: 0 90px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  display: flex;
+  max-width: 100%;
+  //   justify-content: space-between;
+}
+.Text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 40px 0 20px 0;
+}
