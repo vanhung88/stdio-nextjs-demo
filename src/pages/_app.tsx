@@ -6,6 +6,9 @@ import { Provider } from "react-redux";
 import "antd/dist/antd.css";
 import Head from "next/head";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { ServerStyleSheet } from "styled-components";
+import { ThemeProvider } from "styled-components";
 
 // import Header from '../components/Header';
 import store from "../store";
@@ -40,7 +43,7 @@ export default function App({ Component, pageProps }: MyAppProps) {
         <Layout>
           <Component {...pageProps} />
         </Layout>
-        <div>FOOTER</div>
+        <Footer />
       </Provider>
     </div>
   );

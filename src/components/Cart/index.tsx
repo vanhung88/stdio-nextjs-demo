@@ -3,7 +3,7 @@ import { Card, Image } from "antd";
 import Link from "next/link";
 import S from "./style.module.scss";
 export interface IAppProps {
-  id: any;
+  id: string;
   name: string;
   image1: string;
   description: string;

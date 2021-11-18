@@ -21,9 +21,8 @@ const Home: NextPage = () => {
     fetchData();
   }, []);
   function onChange(a: any, b: any, c: any) {
-    console.log(a, b, c);
+    // console.log(a, b, c);
   }
-  console.log(products);
   return (
     <div className={S.Wrapper}>
       <Carousel autoplay style={{ height: "100%", maxWidth: "100%" }}>
